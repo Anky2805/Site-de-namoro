@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente de Namoro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Blenda+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Blenda Script', cursive;
+            background-color: rgb(138, 43, 226);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .carousel img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d3a9d3;
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: fall 5s linear infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d3a9d3;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(45deg);
+                left: calc(100% * var(--x));
+            }
+            100% {
+                transform: translateY(100vh) rotate(45deg);
+                left: calc(100% * var(--x));
+            }
+        }
+
+        audio {
+            display: none;
+        }
+
+        .timer {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Presente de Namoro</h1>
+    <p>Amor da minha vida,<br>
+        Amor da minha vida,
+        Hoje comemoramos 2 anos juntos, e eu só consigo pensar em como sou incrivelmente feliz por ter você ao meu lado. Você é linda, perfeita, maravilhosa, você é simplesmente perfeita em todos os sentidos. A cada sorriso seu, meu coração se aquece, e a cada momento que passamos juntos, eu percebo o quanto sou abençoado por ter encontrado alguém tão especial.
+        Agradeço a Deus todo santo dia por ter você, eu sei q nós passamos por momentos difíceis, mas nós sempre passamos por cima deles, sempre resolvemos todos os conflitos, e EU TE AMO TANTO MEU AMOR. Você é tão perfeita eu só tenho a agradecer dentre 2 anos, ou 24 meses, ou 104 semanas ou se preferir 731 dias eu me senti muito especial graças a você amor.
+        Sou imensamente grato por tudo o que você é e tudo o que faz por nós. Você é a razão dos meus melhores dias e a inspiração para continuar sonhando alto. Eu te amo mais do que palavras podem expressar, e espero continuar celebrando muitos anos ao seu lado.
+        <br>
+Feliz dois anos, meu amor! ❤️</p>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+            <img src="imagens/imagem-n1.jpeg" alt="Foto 1">
+            <img src="imagens/imagem-sozinha-n1.jpeg" alt="Foto 2">
+            <img src="imagens/imagem-n2.jpeg" alt="Foto 3">
+            <img src="imagens/imagem-sozinha-n2.jpeg" alt="Foto 4">
+            <img src="imagens/imagem-n3.jpeg" alt="Foto 5">
+            <img src="imagens/imagem-sozinha-n3.jpeg" alt="Foto 6">
+            <img src="imagens/imagem-n4.jpeg" alt="Foto 7">
+            <img src="imagens/imagem-sozinha-n4.jpeg" alt="Foto 8">
+            <img src="imagens/imagem-n5.jpeg" alt="Foto 9">
+            <img src="imagens/imagem-sozinha-n5.jpeg" alt="Foto 10">
+
+        </div>
+    </div>
+
+    <div class="hearts"></div>
+
+    <div class="timer" id="timer">Carregando...</div>
+
+    <audio autoplay loop>
+        <source src="I_Wanna_Be_Yours.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script>
+        const heartsContainer = document.querySelector('.hearts');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.setProperty('--x', Math.random());
+            heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+    </script>
+</body>
+</html>
